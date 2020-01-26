@@ -1,0 +1,125 @@
+/**
+* DarkCold GTK3
+* http://gnome-look.org/content/show.php/DarkCold?content=143165
+*
+* @author: originalseed
+* @since: Dec 2, 2011.
+*/
+
+/****************
+ * Applications *
+ ****************/
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    background-color: @chrome_bg_color;
+    -EogScrollView-shadow-type: none;
+}
+
+/* gnome-terminal */
+TerminalScreen {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    -TerminalScreen-background-darkness: 0.95;
+}
+
+/* nautilus */
+.nautilus-canvas-item,
+.nemo-canvas-item {
+    border-radius: 5px;
+    /*font: bold 50;*/
+	font-weight:bold;
+}
+
+.nautilus-desktop.nautilus-canvas-item,
+.nemo-desktop.nemo-canvas-item {
+    color: #ffffff;
+    text-shadow: 1px 1px black;
+    /*font: bold 50;*/
+	font-weight:bold;	
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nemo-desktop.nemo-canvas-item:active {
+    color: shade(@theme_fg_color,0.8);
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected,
+.nemo-desktop.nemo-canvas-item:selected {
+    color: @theme_selected_fg_color;
+    text-shadow: 1px 1px alpha(black, 0.3);
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nemo-desktop.nemo-canvas-item:active,
+.nemo-desktop.nemo-canvas-item:prelight {
+    text-shadow: none;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected:backdrop,
+.nemo-desktop.nemo-canvas-item:selected:backdrop {
+    color: shade(@theme_selected_fg_color, 0.7);
+}
+
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    background-color: @nautilus_cluebar_color;
+    border: solid;
+    border-image: url("darkelements/border-passive.png") 2 2 2 2 / 2px 2px 2px 2px stretch;
+    border-width: 2px;
+}
+
+NautilusSearchBar .entry {
+    border-image: none;
+    border-color: @nautilus_cluebar_color;
+
+    -GtkEntry-inner-border: 2px;
+}
+
+NautilusSearchBar .entry.image {
+    color: @nautilus_cluebar_color;
+}
+
+.nautilus-cluebar-label {
+    font: bold;
+    color: @theme_text_color;
+    border: solid;
+    border-image: url("darkelements/border-passive.png") 2 2 2 2 / 2px 2px 2px 2px stretch;
+    border-width: 2px;
+}
+
+#nautilus-search-button *:active,
+#nautilus-search-button *:active:prelight {
+    color: darker (@nautilus_cluebar_color);
+}
+
+NautilusFloatingBar {
+
+}
+
+NautilusFloatingBar .button {
+    background-image: url("darkelements/button-normal.png");
+    border: solid;
+    border-image: url("darkelements/button-normal-border.png") 2 2 2 2 / 2px 2px 2px 2px stretch stretch;
+    color: @theme_text_color;
+
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 0;
+}
+
+NautilusWindow .sidebar .frame {
+    border: solid;
+    border-image: url("darkelements/border-passive.png") 2 2 2 2 / 2px 2px 2px 2px stretch;
+    border-width: 2px;
+            
+}
+
+NautilusWindow > GtkTable > .pane-separator {
+    border: solid;
+    border-image: url("darkelements/border-passive.png") 2 2 2 2 / 2px 2px 2px 2px stretch;
+    border-width: 2px;
+}
