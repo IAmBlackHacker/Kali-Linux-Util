@@ -1,0 +1,3 @@
+echo "Making chrome runnable on root" 
+sed -i -e 's/exec \-a "\$\0" "\$HERE\/chrome" "\$\@"/if \[\[ \-n "\$CHROME_USER_DATA_DIR" \]\]\; then\n\texec \-a "\$\0" "\$HERE\/chrome"  \\\n\t\t\-\-user\-data\-dir\="\$CHROME_USER_DATA_DIR" "\$\@"\nelse\n\tif \[ "\$USER" \= "root" \]  \|\| \[ "\$LOGNAME" \= "root" \]\;then \n\t\texec \-a "\$\0" "\$HERE\/chrome" "\$\@" \-\-user\-data\-dir \-\-no\-sandbox\n\telse\n\t\texec \-a "\$\0" "\$HERE\/chrome"  "\$\@"\n\tfi\nfi/g' /opt/google/chrome/google-chrome
+echo "Done!"
